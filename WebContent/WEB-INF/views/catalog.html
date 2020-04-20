@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Music Store</title>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="container">
+		<div>
+    		<div class="bentrai">
+    			<img th:src="@{/images/ngo.jpg}" />
+        	</div>
+        	<div class="benphai">
+        		<h1 style="color:#F90">Fresh Corn Records</h1>
+        		<h2 style="color:#0C3; font-style:italic">Quality Sounds Served Up Fresh!</h2>
+    		</div>
+    
+    	</div>
+    	<div style="clear:both"></div>
+        <br />
+        <br />
+        <div class="gachduoi"></div>
+		<div class="menu">
+        	<span style="font-weight:bold; color:black; font-size:24px; margin-left:770px">|</span>
+        	<a class="linkmenu" href="">Admin</a>
+            <span style="font-weight:bold; color:black; font-size:24px">|</span>
+            <a class="linkmenu" href="logout">Delete Cookies</a>
+            <span style="font-weight:bold; color:black; font-size:24px">|</span>
+            <a class="linkmenu" href="">Show Cart</a>
+        </div>
+        <div class="gachduoi"></div>
+    	<div class="content">
+    		<div class="noidungtrai">
+    			<a class="menu2" href="home">Home</a>
+                <a class="menu2" style="color:#F60" href="catalog">Browse Catalog</a>
+                <a class="menu2" href="">Join Email List</a>
+                <a class="menu2" href="">Customer Service</a>
+    		</div>
+    		<div class="noidungchinh">
+    			<h1>The Fresh Corn Records Catalog</h1>
+                <h2>86 (the band)</h2>
+                <a class="menu2" href="product.html?productCode=8601">True Life Songs and Pictures</a>
+                <h2>Paddlefoot</h2>
+                <a class="menu2" href="product.html?productCode=pf01">Paddlefoot (the first album)</a>
+                <a class="menu2" href="product.html?productCode=pf02">Paddlefoot (the second album)</a>
+                <h2>Joe Rut</h2>
+                <a class="menu2" href="product.html?productCode=jr01">Genuine Wood Grained Finish</a>
+            </div>
+            <div class="noidungphai">
+            	<h2>New Release</h2>
+                <img th:src="@{/images/86theband.jpg}"/>
+                <h2 class="menu2" style="text-decoration:none; font-size:18px">86 (the band) - True Life Songs and Picture</h2>
+                <p>
+                A refreshing mix of rock, country, and bluegrass that will have you stomping your foot and crying in your beer in no time
+                </p>
+            </div>
+    	</div>
+        <div style="clear:both"></div>
+        <div class="gachduoi"></div>
+        <div class="footer">Copyright by Hoa Nguyen</div>
+    </div>
+
+</body>
+</html>

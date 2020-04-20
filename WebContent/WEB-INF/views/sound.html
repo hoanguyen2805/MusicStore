@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Music Store</title>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="container">
+		<div>
+    		<div class="bentrai">
+    			<img th:src="@{/images/ngo.jpg}" />
+        	</div>
+        	<div class="benphai">
+        		<h1 style="color:#F90">Fresh Corn Records</h1>
+        		<h2 style="color:#0C3; font-style:italic">Quality Sounds Served Up Fresh!</h2>
+    		</div>
+    
+    	</div>
+    	<div style="clear:both"></div>
+        <br />
+        <br />
+        <div class="gachduoi"></div>
+		<div class="menu">
+        	<span style="font-weight:bold; color:black; font-size:24px; margin-left:770px">|</span>
+        	<a class="linkmenu" href="">Admin</a>
+            <span style="font-weight:bold; color:black; font-size:24px">|</span>
+            <a class="linkmenu" href="logout">Delete Cookies</a>
+            <span style="font-weight:bold; color:black; font-size:24px">|</span>
+            <a class="linkmenu" href="">Show Cart</a>
+        </div>
+        <div class="gachduoi"></div>
+    	<div class="content">
+    		<div class="noidungtrai">
+    			<a class="menu2" href="home">Home</a>
+                <a class="menu2" href="catalog">Browse Catalog</a>
+                <a class="menu2" href="">Join Email List</a>
+                <a class="menu2" href="">Customer Service</a>
+    		</div>
+    		<div class="noidungchinh">
+    			<div style="float:left; width: 210px">
+    				<img th:src="@{${product.getImageURL()}}">
+    			</div>
+    			<div style="float:right; width: 340px">
+    				<h2 th:text="${product.getArtistName()}"></h2>
+    			
+    				<h2 th:text="${product.getAlbumName()}"></h2>
+    			
+    				<h2 th:text="${product.getProductType()}"></h2>
+    				<br>
+    				<span th:text=" '$' + ${product.price}"></span>
+    			</div>
+    			<div style="clear: both"></div>
+    			<br>
+    			<!-- <audio controls>
+        			<source src="sound/${product.code}/1.mp3" type="audio/mpeg">
+        		</audio> -->
+        		<audio controls>
+        			<source th:src="@{${product.getSoundURL()}}" type="audio/mpeg">
+        		</audio>
+        		
+        		<h3	th:text="'Email:' +${user.email}"></h3>
+            </div>
+            <div class="noidungphai">
+            	<a href="listen"><img th:src="@{/images/listen.jpg}"></a>
+            </div>
+    	</div>
+        <div style="clear:both"></div>
+        <div class="gachduoi"></div>
+        <div class="footer">Copyright by Hoa Nguyen</div>
+    </div>
+
+</body>
+</html>
